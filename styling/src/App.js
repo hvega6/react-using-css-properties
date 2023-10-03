@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import card from './card.js';
+import Card from './card.js';
+import ModeToggler from './ModeToggler';
 
 const Logo = (props) => {
   const userPic = <img scr = {logo} alt = ""/>;
@@ -10,9 +11,11 @@ const Logo = (props) => {
 function App() {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <ModeToggler/>
       <Logo />
-      <card/>
+      <Card h2="First card" h3="First card"/>
+      <Card h2="Second card" h3="Second card"/>
+      <Card h2="Third card" h3="Third card"/>
     </div>
   );
 }
