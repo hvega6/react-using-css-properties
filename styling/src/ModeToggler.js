@@ -1,14 +1,18 @@
+import React, {useState} from 'react';
+
+
 function ModeToggler(){
     let darkModeOn = false;
-    const darkMode = <h1>Dark Mode is On</h1>
-    const lightMode = <h1>Light Mode is On</h1>
+    const [darkMode, setDarkMode] = React.useState("Dark mode")
+    const [lightMode, setLightMode] = React.useState("Light mode")
+
 
     function handleClick(){
         darkModeOn = !darkModeOn;
-        if (darkModeOn == true){
-            console.log("Dark mode is on")
+        if (darkModeOn === true){
+            setLightMode({darkMode})
         } else {
-            console.log("Light mode is on")
+            setDarkMode({lightMode})
         }
     }
     
